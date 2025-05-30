@@ -1,0 +1,192 @@
+/* Paleta de cores baseada na bandeira */
+:root {
+    --primary-blue: #1E3A8A;
+    --secondary-yellow: #FCD34D;
+    --accent-red: #DC2626;
+    --neutral-white: #FFFFFF;
+    --light-gray: #F8FAFC;
+    --dark-gray: #374151;
+}
+
+body {
+    background-color: var(--light-gray);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header customizado */
+.header-custom {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-red) 100%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Footer customizado */
+.footer-custom {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-red) 100%);
+    margin-top: auto;
+}
+
+/* Cards customizados */
+.card-custom {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-2px);
+}
+
+.card-custom .card-header {
+    background: linear-gradient(135deg, var(--secondary-yellow) 0%, #F59E0B 100%);
+    border: none;
+    border-radius: 15px 15px 0 0;
+    color: var(--dark-gray);
+    font-weight: bold;
+}
+
+/* Botões customizados */
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #1E40AF 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-primary-custom:hover {
+    background: linear-gradient(135deg, #1E40AF 0%, var(--primary-blue) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+    color: white;
+}
+
+.btn-secondary-custom {
+    background: linear-gradient(135deg, var(--secondary-yellow) 0%, #F59E0B 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+    background: linear-gradient(135deg, #F59E0B 0%, var(--secondary-yellow) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    color: var(--dark-gray);
+}
+
+.btn-success-custom {
+    background: linear-gradient(135deg, var(--accent-red) 0%, #EF4444 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-success-custom:hover {
+    background: linear-gradient(135deg, #EF4444 0%, var(--accent-red) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+    color: white;
+}
+
+/* Cores de texto customizadas */
+.text-primary-custom {
+    color: var(--primary-blue) !important;
+}
+
+.text-secondary-custom {
+    color: var(--secondary-yellow) !important;
+}
+
+.text-success-custom {
+    color: var(--accent-red) !important;
+}
+
+/* Formulários */
+.form-control {
+    border-radius: 10px;
+    border: 2px solid #E2E8F0;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
+}
+
+/* Tabelas */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #1E40AF 100%);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(30, 58, 138, 0.05);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card-custom {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .btn-primary-custom,
+    .btn-secondary-custom,
+    .btn-success-custom {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ícones Font Awesome (incluir no head dos templates) */
+.fa-3x {
+    font-size: 3em;
+}
+
+/* Efeitos hover para cards da página inicial */
+.card-custom .card-body {
+    padding: 2rem;
+}
+
+.card-custom .card-body i {
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover .card-body i {
+    transform: scale(1.1);
+}
