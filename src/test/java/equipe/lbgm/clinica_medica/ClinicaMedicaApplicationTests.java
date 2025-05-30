@@ -1,10 +1,10 @@
-package edu.unialfa.Java.Dormir;
+package equipe.lbgm.clinica_medica;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class ClinicaMedicaApplicationTests {
 
 	@Test
 	void contextLoads() {
