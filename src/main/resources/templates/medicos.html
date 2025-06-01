@@ -13,7 +13,18 @@
 <div class="container mt-4">
   <h2 class="text-primary-custom mb-4">Gestão de Médicos</h2>
 
-  <!-- Formulário de Cadastro -->
+  
+  <div th:if="${erro}" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <span th:text="${erro}"></span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <div th:if="${sucesso}" class="alert alert-success alert-dismissible fade show" role="alert">
+    <span th:text="${sucesso}"></span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+
   <div class="card card-custom mb-4">
     <div class="card-header">
       <h5 class="mb-0">Cadastrar/Editar Médico</h5>
@@ -40,7 +51,7 @@
     </div>
   </div>
 
-  <!-- Lista de Médicos -->
+
   <div class="card card-custom">
     <div class="card-header">
       <h5 class="mb-0">Lista de Médicos</h5>
@@ -80,5 +91,8 @@
 </div>
 
 <div th:replace="~{layout :: footer}"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
