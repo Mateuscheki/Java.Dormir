@@ -12,12 +12,20 @@
 <div th:replace="~{layout :: header}"></div>
 
 <div class="container mt-4">
-  <div th:if="${erro}" class="alert alert-warning alert-dismissible fade show" role="alert">
-    <i class="fas fa-exclamation-triangle"></i> <span th:text="${erro}"></span>
+
+  <!-- Mensagem de Sucesso -->
+  <div th:if="${sucesso}" class="alert alert-success alert-dismissible fade show" role="alert">
+    <i class="fas fa-check-circle"></i> <span th:text="${sucesso}"></span>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
   </div>
-  <h2 class="text-primary-custom mb-4">Gestão de Pacientes</h2>
 
+  <!-- Mensagem de Erro -->
+  <div th:if="${erro}" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <i class="fas fa-exclamation-circle"></i> <span th:text="${erro}"></span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+  </div>
+
+  <h2 class="text-primary-custom mb-4">Gestão de Pacientes</h2>
 
   <!-- Formulário de Cadastro -->
   <div class="card card-custom mb-4">
@@ -81,7 +89,7 @@
               <a th:href="@{/pacientes/editar/{id}(id=${p.id})}" class="btn btn-sm btn-warning">Editar</a>
               <a th:href="@{/pacientes/deletar/{id}(id=${p.id})}"
                  class="btn btn-danger btn-sm"
-                 onclick="return confirm('Este paciente possui agendamentos. Deseja realmente excluí-lo? Os agendamentos vinculados serão excluídos automaticamente.');">
+                 onclick="return confirm('Deseja realmente excluir este paciente?');">
                 <i class="fas fa-trash-alt"></i> Excluir
               </a>
             </td>
