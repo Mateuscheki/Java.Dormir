@@ -35,8 +35,8 @@
             <input type="text" class="form-control" th:field="*{nome}" required>
           </div>
           <div class="col-md-6 mb-3">
-            <label th:for="cpf" class="form-label">CPF</label>
-            <input type="text" class="form-control" th:field="*{cpf}" required>
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" id="cpf" class="form-control" th:field="*{cpf}" required>
           </div>
         </div>
         <div class="row">
@@ -103,6 +103,9 @@
 <script>
   $(document).ready(function(){
     $('#telefone').mask('(00) 00000-0000');
+  });
+   $(document).ready(function(){
+    $('#cpf').mask('000.000.000-00');
   });
 </script>
 </html>
